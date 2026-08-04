@@ -6,9 +6,9 @@ A red team is a group of hackers with varying backgrounds that test the organisa
 
 ### Attacks performed by Red Teamers:
 
-## 1. Cyber (Digital Attacks: Web, Network & Other Cloud Technologies).
-## 2. Social Attacks (Social Engineering, exploiting peoples behaviour).
-## 3. Physical Attacks (Physical man-poer, lock picking, etc)
+### 1. Cyber (Digital Attacks: Web, Network & Other Cloud Technologies).
+### 2. Social Attacks (Social Engineering, exploiting peoples behaviour).
+### 3. Physical Attacks (Physical man-poer, lock picking, etc)
 
 It is similar to pentesting but is more specific and targeted.
 
