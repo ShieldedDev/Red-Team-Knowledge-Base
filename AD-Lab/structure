@@ -1,0 +1,36 @@
+AD-Lab/
+│
+├── README.md
+├── Architecture.md
+│
+├── 01-Setup/
+│   ├── VirtualBox.md
+│   ├── Networking.md
+│   ├── DC01.md
+│   ├── CTO.md
+│   └── CYDECK.md
+│
+├── 02-Enterprise/
+│   ├── Organizational-Units.md
+│   ├── Security-Groups.md
+│   ├── Users.md
+│   ├── Group-Membership.md
+│   ├── Service-Accounts.md
+│   ├── SMB-Shares.md
+│   └── NTFS-Permissions.md
+│
+├── 03-Group-Policy/
+│
+├── 04-PowerShell/
+│
+├── 05-Enumeration/
+│
+├── 06-Attacks/
+│
+├── 07-Detection/
+│
+├── 08-Hardening/
+│
+├── Images/
+│
+└── PowerShell/
