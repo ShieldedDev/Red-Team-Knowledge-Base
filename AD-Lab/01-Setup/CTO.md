@@ -188,7 +188,7 @@ For this lab:
 
 | Username |
 |-----------|
-| Tyrell W |
+| Tyrell |
 
 This account is temporary and will only be used during the initial workstation configuration.
 
