@@ -175,7 +175,7 @@ Access work or school
 
 Open the matching System Settings application.
 
-![Search Access Work or School](../Images/Search-add.png)
+![Search Access Work or School](Images/Search-add.png)
 
 ---
 
@@ -183,7 +183,7 @@ Open the matching System Settings application.
 
 Inside **Access work or school**, click **Connect**.
 
-![Access Work or School](../Images/connect.png)
+![Access Work or School](Images/connect.png)
 
 ---
 
@@ -199,7 +199,7 @@ Join this device to a local Active Directory domain
 
 This option allows the workstation to join an on-premises Active Directory environment.
 
-![Join Local Active Directory](../Images/alternate_actions.png)
+![Join Local Active Directory](Images/alternate_actions.png)
 
 ---
 
@@ -213,7 +213,7 @@ evil.corp
 
 Click **Next**.
 
-![Enter Domain Name](../Images/join_doamain-name.png)
+![Enter Domain Name](Images/join_doamain-name.png)
 
 ---
 
@@ -230,7 +230,7 @@ Provide the following credentials:
 
 Click **OK**.
 
-![Domain Credentials](../Images/enter-creds.png)
+![Domain Credentials](Images/enter-creds.png)
 
 ---
 
@@ -242,7 +242,7 @@ The system must reboot to complete the process.
 
 Do not interrupt the restart.
 
-![Restart Required](../Images/rebooted_after-login.png)
+![Restart Required](Images/rebooted_after-login.png)
 
 ---
 
@@ -266,7 +266,7 @@ tyrell@evil.corp
 
 Enter the appropriate password and sign in.
 
-![Login Using Domain User](../Images/login_to_e-corp_domain_as-tyrell.png)
+![Login Using Domain User](Images/login_to_e-corp_domain_as-tyrell.png)
 
 ---
 
@@ -278,7 +278,7 @@ This process may take several minutes.
 
 Do not power off the machine.
 
-![Preparing User Profile](../Images/log-in-successful-to-domain.png)
+![Preparing User Profile](Images/log-in-successful-to-domain.png)
 
 ---
 
@@ -298,7 +298,7 @@ Groups
 Administrators
 ```
 
-![Computer Management](../Images/computer-management.png)
+![Computer Management](Images/computer-management.png)
 
 Open the **Administrators** group.
 
@@ -309,7 +309,7 @@ The following members should be present:
 - e-corp\tyrell
 - tyrell
 
-![Administrators Group](../Images/add-user.png)
+![Administrators Group](Images/add-user.png)
 
 This confirms that the workstation has successfully joined the Active Directory domain and that the required administrative permissions have been applied.
 
@@ -361,7 +361,7 @@ C:\
  └── Share
 ```
 
-![Create Share Folder](../Images/Create%20Share%20Folder.png)
+![Create Share Folder](Images/Create%20Share%20Folder.png)
 
 ---
 
@@ -373,7 +373,7 @@ Right-click the **Share** folder and select:
 Properties
 ```
 
-![Folder Properties](../Images/click_on_share.png)
+![Folder Properties](Images/click_on_share.png)
 
 ---
 
@@ -396,7 +396,7 @@ Share...
 
 > **Note:** Advanced Sharing provides more granular control over share names, permissions, and caching. It is commonly used in enterprise environments.
 
-![Sharing Tab](../Images/advanced_sharing.png)
+![Sharing Tab](Images/advanced_sharing.png)
 
 ---
 
@@ -424,7 +424,7 @@ Share
 
 This grants access to the selected users over the network.
 
-![Share with Everyone](../Images/share_everyone.png)
+![Share with Everyone](Images/share_everyone.png)
 
 ---
 
@@ -438,7 +438,7 @@ Yes, turn on network discovery and file sharing for all public networks
 
 This allows the shared folder to become accessible from other systems on the network.
 
-![Enable Network Discovery](../Images/yes-on-all-networks.png)
+![Enable Network Discovery](Images/yes-on-all-networks.png)
 
 ---
 
@@ -458,7 +458,7 @@ Click:
 Done
 ```
 
-![Sharing Complete](../Images/done.png)
+![Sharing Complete](Images/done.png)
 
 ---
 
