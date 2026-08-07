@@ -116,7 +116,7 @@ Read and accept the Microsoft License Agreement.
 
 Click **Next**.
 
-![](Images/CTO/agree_and_tick(1).png)
+![](Images/CTO/agree_and_tick.png)
 
 ---
 
