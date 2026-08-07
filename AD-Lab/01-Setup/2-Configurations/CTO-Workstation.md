@@ -13,7 +13,7 @@ This document covers the post-installation configuration performed on the **CTO 
 | IP Address | 192.168.56.20 |
 | Subnet Mask | 255.255.255.0 |
 | Preferred DNS | 192.168.56.10 |
-| Domain | (Joined later) |
+| Domain | evil.corp |
 
 ---
 
