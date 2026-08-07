@@ -143,3 +143,4 @@ This configuration allows the workstation to:
 - Locate the Domain Controller
 - Join the Active Directory domain
 - Access enterprise resources such as shared folders and authentication services
+  
