@@ -50,7 +50,7 @@ Select the downloaded Windows ISO.
 
 Leave **Proceed with Unattended Installation** unchecked since the workstation will be configured manually.
 
-![](Images/win10-iso.png)
+![](Images/CTO/win10-iso.png)
 
 ---
 
@@ -70,7 +70,7 @@ Choose the following settings.
 
 Click **Next**.
 
-![](Images/select_region.png)
+![](Images/CTO/select_region.png)
 
 ---
 
@@ -78,7 +78,7 @@ Click **Next**.
 
 Click **Install Now** to begin the installation.
 
-![](Images/install_now.png)
+![](Images/CTO/install_now.png)
 
 ---
 
@@ -92,7 +92,7 @@ Click
 
 to continue.
 
-![](Images/windows_key.png)
+![](Images/CTO/windows_key.png)
 
 ---
 
@@ -106,7 +106,7 @@ then click **Next**.
 
 > Windows Home editions cannot join an Active Directory domain, therefore Windows Pro is required.
 
-![](Images/select-win-10-pro.png)
+![](Images/CTO/select-win-10-pro.png)
 
 ---
 
@@ -116,7 +116,7 @@ Read and accept the Microsoft License Agreement.
 
 Click **Next**.
 
-![](Images/agree_and_tick(1).png)
+![](Images/CTO/agree_and_tick(1).png)
 
 ---
 
@@ -128,7 +128,7 @@ Select
 
 This performs a clean installation instead of attempting an upgrade.
 
-![](Images/custom_options.png)
+![](Images/CTO/custom_options.png)
 
 ---
 
@@ -140,7 +140,7 @@ Click **Next**.
 
 Windows will automatically create the required partitions.
 
-![](Images/partiotions.png)
+![](Images/CTO/partiotions.png)
 
 ---
 
@@ -150,7 +150,7 @@ Windows now copies installation files, installs required features, installs upda
 
 The virtual machine will automatically reboot multiple times.
 
-![](Images/installting.png)
+![](Images/CTO/installting.png)
 
 ---
 
@@ -164,7 +164,7 @@ Choose
 
 and continue.
 
-![](Images/select_region-after-installing.png)
+![](Images/CTO/select_region-after-installing.png)
 
 ---
 
@@ -176,7 +176,7 @@ Select
 
 Click **Yes**.
 
-![](Images/keyboard-layout.png)
+![](Images/CTO/keyboard-layout.png)
 
 ---
 
@@ -194,7 +194,7 @@ This account is temporary and will only be used during the initial workstation c
 
 After the workstation joins the domain, authentication will occur using Active Directory accounts.
 
-![](Images/username.png)
+![](Images/CTO/username.png)
 
 ---
 
@@ -213,7 +213,7 @@ Recommended configuration:
 
 Click **Accept**.
 
-![](Images/privacy-settings.png)
+![](Images/CTO/privacy-settings.png)
 
 ---
 
@@ -223,7 +223,7 @@ Windows should now boot successfully to the desktop.
 
 At this stage the workstation is standalone and is **not yet joined to the Active Directory domain**.
 
-![](Images/successfully_installed.png)
+![](Images/CTO/successfully_installed.png)
 
 ---
 
@@ -246,7 +246,7 @@ CTO
 
 Restart the computer when prompted.
 
-![](Images/rename-pc.png)
+![](Images/CTO/rename-pc.png)
 
 ---
 
