@@ -27,7 +27,7 @@ The workstation must communicate with the Domain Controller using a static IPv4 
 
 After Windows installation the workstation receives an unidentified network because no static IP or DNS server has been configured.
 
-![Initial Network](Images/network-nd-sharing.png)
+![Initial Network](Images/Network_settings/network-nd-sharing.png)
 
 At this stage:
 
@@ -53,7 +53,7 @@ Change Adapter Options
 
 This opens the classic Network Connections window.
 
-![Change Adapter Settings](Images/change-adapter-settings.png)
+![Change Adapter Settings](Images/Network_settings/change-adapter-settings.png)
 
 ---
 
@@ -61,7 +61,7 @@ This opens the classic Network Connections window.
 
 Right-click the Ethernet adapter and select **Properties**.
 
-![Ethernet Properties](Images/properties.png)
+![Ethernet Properties](Images/Network_settings/properties.png)
 
 The Ethernet Properties window contains all networking protocols installed on the adapter.
 
@@ -89,7 +89,7 @@ Configure the following values.
 
 The Domain Controller (DC01) acts as the DNS server for all domain clients.
 
-![IPv4 Configuration](Images/set-ip.png)
+![IPv4 Configuration](Images/Network_settings/set-ip.png)
 
 ---
 
@@ -107,7 +107,7 @@ Windows immediately applies the new networking configuration.
 
 The Ethernet Properties dialog should now show IPv4 configured correctly.
 
-![Ethernet Adapter](Images/ipv4-settings.png)
+![Ethernet Adapter](Images/Network_settings/ipv4-settings.png)
 
 ---
 
@@ -129,7 +129,7 @@ Preferred DNS . . . . . . : 192.168.56.10
 
 Verify that the IP address matches the configuration assigned earlier.
 
-![Verify Configuration](Images/ipconfig.png)
+![Verify Configuration](Images/Network_settings/ipconfig.png)
 
 ---
 
