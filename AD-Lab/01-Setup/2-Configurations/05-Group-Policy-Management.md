@@ -10,7 +10,7 @@ In this lab, a GPO named **Disabled Windows Defender** is created and linked to 
 
 ---
 
-## 1. Open Group Policy Management
+## 1. Open Group Policy Management 
 
 From **Server Manager**, search for:
 
