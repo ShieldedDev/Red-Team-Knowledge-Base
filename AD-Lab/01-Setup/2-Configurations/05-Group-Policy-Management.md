@@ -18,7 +18,7 @@ From **Server Manager**, search for:
 
 The Group Policy Management console provides the management view for the Active Directory forest and its domains.
 
-![Search for Group Policy Management](Search%20Group%20Policy%20Mgmt.png)
+![Search for Group Policy Management](Images/DC/Group_Policy_Management/Search%20Group%20Policy%20Mgmt.png)
 
 ---
 
@@ -41,7 +41,7 @@ The domain contains objects such as:
 - WMI Filters
 - Starter GPOs
 
-![Forest and domain](Forest.png)
+![Forest and domain](Images/DC/Group_Policy_Management/Forest.png)
 
 ### Important GPMC objects
 
@@ -61,7 +61,7 @@ Right-click the domain `evil.corp` and select:
 
 **Create a GPO in this domain, and Link it here...**
 
-![Create a new GPO](create_new_GPO.png)
+![Create a new GPO](Images/DC/Group_Policy_Management/create_new_GPO.png)
 
 This creates the GPO and simultaneously creates a **link** from the selected domain to that GPO.
 
@@ -73,7 +73,7 @@ Use:
 Disabled Windows Defender
 ```
 
-![Name the GPO](name_GPO.png)
+![Name the GPO](Images/DC/Group_Policy_Management/name_GPO.png)
 
 The important distinction is:
 
@@ -96,7 +96,7 @@ After creating the GPO, right-click it and select:
 
 **Edit**
 
-![Edit the GPO](edit.png)
+![Edit the GPO](Images/DC/Group_Policy_Management/edit.png)
 
 This opens the **Group Policy Management Editor**.
 
@@ -116,7 +116,7 @@ User Configuration
     └── Administrative Templates
 ```
 
-![Policy structure](policies.png)
+![Policy structure](Images/DC/Group_Policy_Management/policies.png)
 
 ### Computer vs User Configuration
 
@@ -144,7 +144,7 @@ Computer Configuration
 
 Administrative Templates provide policy definitions for Windows components and applications.
 
-![Administrative Templates](admin_templates.png)
+![Administrative Templates](Images/DC/Group_Policy_Management/admin_templates.png)
 
 The screenshot shows categories including:
 
@@ -173,7 +173,7 @@ Computer Configuration
             └── Microsoft Defender Antivirus
 ```
 
-![Microsoft Defender Antivirus](ms_windows-defender.png)
+![Microsoft Defender Antivirus](Images/DC/Group_Policy_Management/ms_windows-defender.png)
 
 The Defender policy area contains settings related to:
 
@@ -205,7 +205,7 @@ Then configure the policy as:
 Enabled
 ```
 
-![Turn off Microsoft Defender Antivirus](turn-off-ms-defender-av.png)
+![Turn off Microsoft Defender Antivirus](Images/DC/Group_Policy_Management/turn-off-ms-defender-av.png)
 
 The policy description in the editor states that enabling this policy turns off Microsoft Defender Antivirus.
 
@@ -223,7 +223,7 @@ Not Configured = Leave the setting at its normal/default behavior
 
 Therefore, **Enabled** here refers to enabling the *policy*, not enabling Defender.
 
-![Policy configured as Enabled](ms-win-defender-off-enabled.png)
+![Policy configured as Enabled](Images/DC/Group_Policy_Management/ms-win-defender-off-enabled.png)
 
 ---
 
@@ -237,7 +237,7 @@ Microsoft Defender Exploit Guard
 
 section.
 
-![Microsoft Defender Exploit Guard](win-exploit-guard.png)
+![Microsoft Defender Exploit Guard](Images/DC/Group_Policy_Management/win-exploit-guard.png)
 
 It contains areas such as:
 
@@ -284,7 +284,7 @@ Enforced: Yes
 Link Enabled: Yes
 ```
 
-![GPO link enforced](enforced-yes.png)
+![GPO link enforced](Images/DC/Group_Policy_Management/enforced-yes.png)
 
 ### Enforced vs Link Enabled
 
