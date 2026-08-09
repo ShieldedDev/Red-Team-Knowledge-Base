@@ -222,11 +222,11 @@ Therefore, failed ICMP does **not** automatically mean that a target is dead.
 
 ### Host discovery
 
-![Nmap host discovery](../Images/Enumeration/Host-Discovery/host-discovery.png)
+![Nmap host discovery](Images/Host-Discovery/host-discovery.png)
 
 ### ICMP connectivity test
 
-![Ping DC1](../Images/Enumeration/Host-Discovery/ping.png)
+![Ping DC1](Images/Host-Discovery/ping.png)
 
 > Adjust the image paths if the images are stored in a different directory in the repository.
 
