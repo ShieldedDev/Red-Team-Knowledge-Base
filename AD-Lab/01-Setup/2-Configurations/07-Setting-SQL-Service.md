@@ -39,7 +39,7 @@ Right-click **Command Prompt** and select:
 Run as administrator
 ```
 
-![Open Command Prompt as Administrator](Images/DC/setting_sql-service/CMD_as_admin(1).png)
+![Open Command Prompt as Administrator](Images/DC/setting_sql-service/CMD_as_admin.png)
 
 An elevated Command Prompt is used because modifying Active Directory service principal names requires appropriate privileges.
 
@@ -53,7 +53,7 @@ The following command is executed:
 setspn -S DC1/SQLService.evil.corp:60111 SQLService
 ```
 
-![Register SQL Service SPN](Images/DC/setting_sql-service/setspn-service(1).png)
+![Register SQL Service SPN](Images/DC/setting_sql-service/setspn-service.png)
 
 The command output shows:
 
