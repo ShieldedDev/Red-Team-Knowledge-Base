@@ -663,4 +663,4 @@ That information will form the basis for identifying realistic attack paths in t
 
 ## Evidence
 
-![Service enumeration with Nmap](../Images/Port-Scanning/service-enum.png)
+![Service enumeration with Nmap](/Images/Port-Scanning/service-enum.png)

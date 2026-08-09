@@ -159,7 +159,7 @@ This is significant because the vast majority of TCP ports did not respond to th
 
 ## Full Port Scan Evidence
 
-![Nmap full TCP port scan](../Images/Port-Scanning/nmap-all-ports.png)
+![Nmap full TCP port scan](Images/Port-Scanning/nmap-all-ports.png)
 
 ---
 
@@ -317,7 +317,7 @@ OS:   Windows
 
 ## Service Enumeration Evidence
 
-![Nmap service and version enumeration](../Images/Port-Scanning/service-enum.png)
+![Nmap service and version enumeration](Images/Port-Scanning/service-enum.png)
 
 ---
 
