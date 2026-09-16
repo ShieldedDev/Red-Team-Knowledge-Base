@@ -479,9 +479,7 @@ evil.corp
 
 ### Screenshot
 
-![mitm6 IPv6/DNS poisoning](Images/mitm6%20(2).png)
-
-> If your repository uses a different filename for this screenshot, adjust the Markdown path accordingly. The source screenshot supplied for this walkthrough is `mitm6(2).png`.
+![mitm6 IPv6/DNS poisoning](Images/mitm6.png)
 
 ---
 
