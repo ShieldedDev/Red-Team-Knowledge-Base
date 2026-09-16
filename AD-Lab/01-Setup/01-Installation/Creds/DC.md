@@ -7,7 +7,7 @@ Elliot Alderson (User of IT): elliot:sam@sapiol
 Terry Colby (Admin) : tcolby:TechSavy@123
 Gideon Goddard (User of HR) : ggedion:Allsafe@123
 Angelina Moss (User of HR) : angelina:angelina@123
-Philip Price (Finance): pprice:MY_P@$$w0rd
+Philip Price (Admin-user-dc1): pphillips:admin@123
 Susan Jacob (Finance): sjacob:P@$$w0rd!
 Darlene Alderson (Developers): dalderson:MY_P@$$w0rd
 Cicso Ramirez (Developers) : cramirez:P@$$w0rd!
