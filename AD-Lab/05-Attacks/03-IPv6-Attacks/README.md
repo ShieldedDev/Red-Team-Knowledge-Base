@@ -684,7 +684,7 @@ Domain info dumped into lootdir!
 
 ### Screenshot
 
-![Successful TYRELL relay](Images/ntlmrelay2%20(1).png)
+![Successful TYRELL relay](Images/ntlmrelay2.png)
 
 ---
 
@@ -730,11 +730,11 @@ domain_users_by_group.html
 
 ### Screenshot
 
-![lootme directory](Images/lootme%20(1).png)
+![lootme directory](Images/lootme.png)
 
 The file listing is also shown in:
 
-![lootme files](Images/lootme-files%20(1).png)
+![lootme files](Images/lootme-files.png)
 
 ---
 
@@ -784,9 +784,8 @@ The report includes attributes such as:
 
 ### Screenshot
 
-![Domain users](Images/domaim-users%20(1).png)
+![Domain users](Images/domaim-users.png)
 
-> The screenshot contains a lab password in an account description. Do not reproduce that credential in public documentation; redact it if the screenshot is published outside the private lab repository.
 
 ---
 
@@ -812,7 +811,7 @@ The screenshot shows:
 
 ### Screenshot
 
-![Domain computer accounts](Images/domain-computers-accounts%20(1).png)
+![Domain computer accounts](Images/domain-computers-accounts.png)
 
 The DC1 entry also contains:
 
@@ -853,7 +852,7 @@ Allowed RODC Password Replication Group
 
 ### Screenshot
 
-![Domain groups](Images/domain-groups%20(1).png)
+![Domain groups](Images/domain-groups.png)
 
 This information is valuable during AD enumeration because group membership can reveal:
 
@@ -880,7 +879,7 @@ Developers
 
 ### Screenshot
 
-![Domain users by group](Images/domain-users-by-group-policy%20(1).png)
+![Domain users by group](Images/domain-users-by-group-policy.png)
 
 This kind of output is particularly useful during an AD assessment because users and groups can be analyzed together.
 
@@ -916,7 +915,7 @@ Machine account quota:   10
 
 ### Screenshot
 
-![Domain password policy](Images/domain-password-polict%20(1).png)
+![Domain password policy](Images/domain-password-polict.png)
 
 ### Important observation
 
